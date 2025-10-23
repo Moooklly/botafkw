@@ -163,6 +163,11 @@ function createBot() {
       return;
     }
 
+    if (args[0].toLowerCase() === '!3') {
+      bot.chat(`🌅 تم تنضيف الجو بنجاح `);
+      bot.chat(`/weather clear`);
+      return;
+    }
 
     
     if (message.toLowerCase().includes('sp?')) bot.chat(`Hi ${username} , Go to X:373 Y:63 Z:446`);

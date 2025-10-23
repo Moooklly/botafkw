@@ -156,42 +156,22 @@ function createBot() {
     }
 
     // ===== باقي أوامرك نفسها بدون أي تعديل =====
-    if (args[0].toLowerCase() === '!sp') {
+    if (args[0].toLowerCase() === '!we') {
       const x = 373, y = 63, z = 446;
       bot.chat(`/tell ${username} 🚀 تم نقلك الآن إلى الإحداثيات: X:${x} Y:${y} Z:${z}`);
       bot.chat(`/tp ${username} ${x} ${y} ${z}`);
       return;
     }
 
-    if (args[0].toLowerCase() === '!m') {
-      const x = 249, y = 63, z = 501;
-      bot.chat(`/tell ${username} 🚀 تم نقلك الآن إلى الإحداثيات: X:${x} Y:${y} Z:${z}`);
-      bot.chat(`/tp ${username} ${x} ${y} ${z}`);
+        if (args[0].toLowerCase() === '!we') {
+      const x = 373, y = 63, z = 446;
+      bot.chat(`🌅 تم تنضيف السماء بنجاح`);
+      bot.chat(`/weather clear`);
       return;
     }
-
-    if (args[0].toLowerCase() === '!h') {
-      const x = 498, y = 64, z = 399;
-      bot.chat(`/tell ${username} 🚀 تم نقلك الآن إلى الإحداثيات: X:${x} Y:${y} Z:${z}`);
-      bot.chat(`/tp ${username} ${x} ${y} ${z}`);
-      return;
-    }
-
-    if (args[0].toLowerCase() === '!s') {
-      const x = 550, y = 69, z = 528;
-      bot.chat(`/tell ${username} 🚀 تم نقلك الآن إلى الإحداثيات: X:${x} Y:${y} Z:${z}`);
-      bot.chat(`/tp ${username} ${x} ${y} ${z}`);
-      return;
-    }
-
-    if (args[0].toLowerCase() === '!w') {
-      const x = 617, y = 72, z = 330;
-      bot.chat(`/tell ${username} 🚀 تم نقلك الآن إلى الإحداثيات: X:${x} Y:${y} Z:${z}`);
-      bot.chat(`/tp ${username} ${x} ${y} ${z}`);
-      return;
-    }
-
+    
     if (message.toLowerCase().includes('sp?')) bot.chat(`Hi ${username} , Go to X:373 Y:63 Z:446`);
+    if (message.toLowerCase().includes('!sp')) bot.chat(`Hi ${username} , Go to X:373 Y:63 Z:446`);
     if (message.toLowerCase().includes('احداثيات السبون؟')) bot.chat(`Hi ${username} , Go to X:373 Y:63 Z:446`);
     if (message === '!help') bot.chat(`Commands: !t , !tpa <@> , !sp , !ho`);
     if (message === '!time') bot.chat(`/tell ${username} ⌛ The current time in the world is: ${Math.floor(bot.time.timeOfDay / 1000)}`);

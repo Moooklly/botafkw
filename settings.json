@@ -35,8 +35,9 @@
       "repeat-delay": 60,
 
       "messages": [
-        "Commands: !time , !tpa <@> , !spawn",
-        "This bot was made by : mooklly"
+        "Commands: !tpa <@> , !sp , !ho , !sleepon , !sleepoff",
+        "This bot was made by : mooklly",
+        "Home : mooklly : !m , rahuomee : !h , CDRSaloom : !s , Wedgead : !w"
       ]
     },
 

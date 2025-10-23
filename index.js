@@ -163,7 +163,7 @@ function createBot() {
       return;
     }
 
-    if (args[0].toLowerCase() === '!3') {
+    if (args[0].toLowerCase() === '!we') {
       bot.chat(`🌅 تم تنضيف الجو بنجاح `);
       bot.chat(`/weather clear`);
       return;

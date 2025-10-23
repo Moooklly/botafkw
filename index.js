@@ -156,19 +156,14 @@ function createBot() {
     }
 
     // ===== باقي أوامرك نفسها بدون أي تعديل =====
-    if (args[0].toLowerCase() === '!we') {
+    if (args[0].toLowerCase() === '!w23213123123123123124 5453434rtrgfsfse') {
       const x = 373, y = 63, z = 446;
       bot.chat(`/tell ${username} 🚀 تم نقلك الآن إلى الإحداثيات: X:${x} Y:${y} Z:${z}`);
       bot.chat(`/tp ${username} ${x} ${y} ${z}`);
       return;
     }
 
-        if (args[0].toLowerCase() === '!we') {
-      const x = 373, y = 63, z = 446;
-      bot.chat(`🌅 تم تنضيف السماء بنجاح`);
-      bot.chat(`/weather clear`);
-      return;
-    }
+
     
     if (message.toLowerCase().includes('sp?')) bot.chat(`Hi ${username} , Go to X:373 Y:63 Z:446`);
     if (message.toLowerCase().includes('!sp')) bot.chat(`Hi ${username} , Go to X:373 Y:63 Z:446`);

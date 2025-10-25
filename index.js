@@ -173,9 +173,8 @@ function createBot() {
     if (message.toLowerCase().includes('sp?')) bot.chat(`Hi ${username} , Go to X:373 Y:63 Z:446`);
     if (message.toLowerCase().includes('!sp')) bot.chat(`Hi ${username} , Go to X:373 Y:63 Z:446`);
     if (message.toLowerCase().includes('احداثيات السبون؟')) bot.chat(`Hi ${username} , Go to X:373 Y:63 Z:446`);
-    if (message === '!help') bot.chat(`Commands: !tpa <@> , !sp , !ho , !sleepon , !sleepoff , !we`);
+    if (message === '!help') bot.chat(`Commands: !tpa <@> , !sp , !sleepon , !sleepoff , !we`);
     if (message === '!time') bot.chat(`/tell ${username} ⌛ The current time in the world is: ${Math.floor(bot.time.timeOfDay / 1000)}`);
-    if (message === '!ho') bot.chat(`/tell ${username} 🏠 mooklly : !m , rahuomee : !h , CDRSaloom : !s , Wedgead : !w`);
   }); // <-- لا تلمسها نهائيًا
 
 

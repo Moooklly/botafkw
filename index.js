@@ -174,7 +174,7 @@ function createBot() {
     if (message.toLowerCase().includes('!sp')) bot.chat(`Hi ${username} , Go to X:373 Y:63 Z:446`);
     if (message.toLowerCase().includes('احداثيات السبون؟')) bot.chat(`Hi ${username} , Go to X:373 Y:63 Z:446`);
     if (message === '!help') bot.chat(`Commands: !tpa <@> , !sp , !sleepon , !sleepoff , !we`);
-    if (message === '!time') bot.chat(`/tell ${username} ⌛ The current time in the world is: ${Math.floor(bot.time.timeOfDay / 1000)}`);
+    if (message === '!time') bot.chat(`/tell ${username} ⌛ The current time in the world is: ${Math.floor(bot.time.timeOfDay / 1000)}`)
   }); // <-- لا تلمسها نهائيًا
 
 

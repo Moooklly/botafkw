@@ -93,19 +93,6 @@ function createBot() {
     const now = Date.now();
     const cooldown = cooldowns[username];
 
-    // ===== أوامر النوم التلقائي =====
-    if (message.toLowerCase() === '!sleepon') {
-      autoSleepEnabled = true;
-      bot.chat(`💤 تم تفعيل النوم التلقائي! البوت سينام تلقائي عندما يأتي الليل.`);
-      return;
-    }
-
-    if (message.toLowerCase() === '!sleepoff') {
-      autoSleepEnabled = false;
-      bot.chat(`🌅 تم إيقاف النوم التلقائي.`);
-      return;
-    }
-
     // ===== أمر TPA إلى لاعب آخر =====
     if (args[0].toLowerCase() === '!tpa' && args[1]) {
       const target = args[1];
@@ -156,8 +143,22 @@ function createBot() {
     }
 
     // ===== باقي أوامرك نفسها بدون أي تعديل =====
-    if (args[0].toLowerCase() === '!w23213123123123123124 5453434rtrgfsfse') {
-      const x = 373, y = 63, z = 446;
+    if (args[0].toLowerCase() === '!m') {
+      const x = -867, y = 76, z = -2959;
+      bot.chat(`/tell ${username} 🚀 تم نقلك الآن إلى الإحداثيات: X:${x} Y:${y} Z:${z}`);
+      bot.chat(`/tp ${username} ${x} ${y} ${z}`);
+      return;
+    }
+
+        if (args[0].toLowerCase() === '!a') {
+      const x = -649, y = 71, z = -3457;
+      bot.chat(`/tell ${username} 🚀 تم نقلك الآن إلى الإحداثيات: X:${x} Y:${y} Z:${z}`);
+      bot.chat(`/tp ${username} ${x} ${y} ${z}`);
+      return;
+    }
+
+            if (args[0].toLowerCase() === '!s') {
+      const x = -2136, y = 65, z = -74;
       bot.chat(`/tell ${username} 🚀 تم نقلك الآن إلى الإحداثيات: X:${x} Y:${y} Z:${z}`);
       bot.chat(`/tp ${username} ${x} ${y} ${z}`);
       return;
@@ -170,28 +171,13 @@ function createBot() {
     }
 
     
-    if (message.toLowerCase().includes('sp?')) bot.chat(`Hi ${username} , Go to X:373 Y:63 Z:446`);
-    if (message.toLowerCase().includes('!sp')) bot.chat(`Hi ${username} , Go to X:373 Y:63 Z:446`);
-    if (message.toLowerCase().includes('احداثيات السبون؟')) bot.chat(`Hi ${username} , Go to X:373 Y:63 Z:446`);
-    if (message === '!help') bot.chat(`Commands: !tpa <@> , !sp , !sleepon , !sleepoff , !we`);
+    if (message.toLowerCase().includes('sp?')) bot.chat(`Hi ${username}`);
+    if (message === '!help') bot.chat(`Commands: !tpa <@> ,!we`);
     if (message === '!time') bot.chat(`/tell ${username} ⌛ The current time in the world is: ${Math.floor(bot.time.timeOfDay / 1000)}`)
   }); // <-- لا تلمسها نهائيًا
 
 
-  // ===== نظام النوم التلقائي =====
-  bot.on('time', () => {
-    if (!autoSleepEnabled) return;
 
-    const time = bot.time.timeOfDay;
-    const isNight = bot.time.isNight;
-
-    if (isNight || (time > 13000 && time < 23000)) {
-      bot.chat('/time set day');
-      bot.chat('💤 نام في السرير بسبب تفعيل النوم التلقائي !');
-      bot.chat('تقدر توقف هاذا الشي عن طريق ( !sleepoff )');
-      console.log('[AutoSleep] الليل جاء، تم تحويل الوقت إلى صباح.');
-    }
-  });
 
 
   // ===== Events =====

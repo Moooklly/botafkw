@@ -18,6 +18,15 @@ function createBot() {
     version: config.server.version
   });
 
+  // ✅ Patch لـ mineflayer-pathfinder لإصلاح blocksByName في 1.20.5+ / 1.21
+const movementsModule = require('mineflayer-pathfinder/lib/movements');
+
+movementsModule.prototype._initCantBreak = function () {
+  // ✅ تخطي blocksCantBreak بالكامل لمنع الكراش
+  this.blocksCantBreak = new Set();
+  return;
+};
+
   bot.loadPlugin(pathfinder);
 const mcDataBot = mcData(bot.version);
 

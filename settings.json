@@ -6,8 +6,8 @@
   },
 
   "server": {
-    "ip": "S5BServer.aternos.me", 
-    "port": 39818,   
+    "ip": "S5BServer2.aternos.me", 
+    "port": 59668,   
     "version": false  
   },
 

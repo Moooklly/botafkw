@@ -19,8 +19,16 @@ function createBot() {
   });
 
   bot.loadPlugin(pathfinder);
-  const mcDataBot = mcData(bot.version);
-  const defaultMove = new Movements(bot, mcDataBot);
+const mcDataBot = mcData(bot.version);
+
+// ✅ إصلاح مشكلة blocksByName في mineflayer-pathfinder
+let defaultMove;
+try {
+  defaultMove = new Movements(bot, mcDataBot);
+} catch (e) {
+  console.log("⚠️ Patch applied: using safe movements");
+  defaultMove = new Movements(bot, null);
+}
 
   const tpaRequests = {};
   const cooldowns = {};
